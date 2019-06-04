@@ -31,3 +31,6 @@
 [submodule "generators/hwacha"]
 	path = generators/hwacha
 	url = git@github.com:ucb-bar/hwacha.git
+[submodule "vlsi/hammer"]
+	path = vlsi/hammer
+	url = git@github.com:ucb-bar/hammer.git
