@@ -16,7 +16,6 @@ if [ ! -d "$BB_SHARE_DOCKER_DIR/$CACHE_NAME" ]; then
     echo "Failed to get $CACHE_NAME from the cache"
 else
     echo "Getting cache and moving it to $INSTALL_DIR"
-    mkdir -p $INSTALL_DIR
     cp -R $BB_SHARE_DOCKER_DIR/$CACHE_NAME $INSTALL_DIR
     echo "Done moving cache"
 fi
