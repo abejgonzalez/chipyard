@@ -10,13 +10,11 @@ HASH_FILE=$HOME/$2
 INSTALL_DIR=$HOME/$3
 
 # full cached name
-CACHE_NAME=$PREFIX-$(md5sum $2 | awk '{print $1;}')
+CACHE_NAME=$PREFIX-$(md5sum $HASH_FILE | awk '{print $1;}')
 
 echo "DEBUG:"
-ls -alh $HOME
-ls -alh $HOME/build
 echo "$PREFIX"
-echo "$(md5sum $2 | awk '{print $1;}')"
+echo "$(md5sum $HASH_FILE | awk '{print $1;}')"
 echo "$CACHE_NAME"
 
 if [ ! -d "$BB_SHARED_DOCKER_DIR/$CACHE_NAME" ]; then
