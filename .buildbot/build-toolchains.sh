@@ -15,5 +15,4 @@ if [ ! -d "$HOME/$1-install" ]; then
     mkdir $HOME/build/$1-install
     touch $HOME/build/$1-install/something
     echo "did this work?"
-
 fi
