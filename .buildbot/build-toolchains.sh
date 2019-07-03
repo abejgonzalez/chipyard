@@ -7,7 +7,6 @@
 set -ex
 
 if [ ! -d "$HOME/$1-install" ]; then
-
     cd $HOME
 
     # init all submodules including the tools
