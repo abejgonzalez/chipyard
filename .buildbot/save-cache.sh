@@ -14,15 +14,9 @@ CACHE_NAME=$PREFIX-$(md5sum $HASH_FILE | awk '{print $1;}')
 
 if [ ! -d "$BB_SHARE_DOCKER_DIR/$CACHE_NAME" ]; then
     echo "Saving $CACHE_NAME"
-    mkdir -p $BB_SHARE_DOCKER_DIR/$CACHE_NAME
     sudo chown -R buildbot:buildbot $BB_SHARE_DOCKER_DIR
-    ls -al $INSTALL_DIR
-    ls -al $BB_SHARE_DOCKER_DIR/$CACHE_NAME
-    ls -al $BB_SHARE_DOCKER_DIR
+    mkdir -p $BB_SHARE_DOCKER_DIR/$CACHE_NAME
     cp -R $INSTALL_DIR $BB_SHARE_DOCKER_DIR/$CACHE_NAME
-    ls -al $INSTALL_DIR
-    ls -al $BB_SHARE_DOCKER_DIR/$CACHE_NAME
-    ls -al $BB_SHARE_DOCKER_DIR
     echo "Done saving cache"
 else
     echo "$CACHE_NAME already exists. Skipping"
