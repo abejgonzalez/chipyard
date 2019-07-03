@@ -6,7 +6,7 @@
 set -ex
 
 # enter bhd repo
-cd $HOME
+cd $HOME/build
 
 # get the version of riscv-tools from the git submodule hash
 git submodule status | grep "riscv-tools" | awk '{print$1}' | grep -o "[[:alnum:]]*" >> $HOME/riscv-tools.hash
