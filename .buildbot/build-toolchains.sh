@@ -11,5 +11,9 @@ if [ ! -d "$HOME/$1-install" ]; then
     cd $HOME
 
     # init all submodules including the tools
-    CHIPYARD_DIR=$HOME/build ./build/scripts/build-toolchains.sh $1
+    #CHIPYARD_DIR=$HOME/build ./build/scripts/build-toolchains.sh $1
+    mkdir $HOME/build/$1-install
+    touch $HOME/build/$1-install/something
+    echo "did this work?"
+
 fi
