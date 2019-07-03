@@ -12,11 +12,6 @@ INSTALL_DIR=$HOME/$3
 # full cached name
 CACHE_NAME=$PREFIX-$(md5sum $HASH_FILE | awk '{print $1;}')
 
-echo "DEBUG:"
-echo "$PREFIX"
-echo "$(md5sum $HASH_FILE | awk '{print $1;}')"
-echo "$CACHE_NAME"
-
 if [ ! -d "$BB_SHARE_DOCKER_DIR/$CACHE_NAME" ]; then
     echo "Saving $CACHE_NAME"
     mkdir -p $INSTALL_DIR
