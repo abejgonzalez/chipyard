@@ -7,6 +7,7 @@ NAME=$1
 HASHFILE=$2
 LOCATION=$3
 
+# create combined name with hashed hash
 COMBINED_NAME=$NAME-$(md5sum $2 | awk '{print $1;}')
 
 if [ ! -d "$BB_SHARED_DOCKER_DIR/$COMBINED_NAME" ]; then
