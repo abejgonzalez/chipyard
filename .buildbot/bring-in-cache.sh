@@ -9,6 +9,7 @@ LOCATION=$3
 
 COMBINED_NAME=$NAME-$(md5sum $2 | awk '{print $1;}')
 
+
 if [ ! -d "$BB_SHARED_DOCKER_DIR/$COMBINED_NAME" ]; then
     echo "Failed to get $COMBINED_NAME from the cache"
 else
