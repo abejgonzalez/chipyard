@@ -13,6 +13,8 @@ INSTALL_DIR=$HOME/$3
 CACHE_NAME=$PREFIX-$(md5sum $2 | awk '{print $1;}')
 
 echo "DEBUG:"
+ls -alh $HOME
+ls -alh $HOME/build
 echo "$PREFIX"
 echo "$(md5sum $2 | awk '{print $1;}')"
 echo "$CACHE_NAME"
