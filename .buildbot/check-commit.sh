@@ -6,7 +6,7 @@
 set -ex
 
 # enter bhd repo
-cd $HOME/project
+cd $HOME/build
 
 # initialize submodules and get the hashes
 git submodule update --init
