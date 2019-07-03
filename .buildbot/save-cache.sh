@@ -16,6 +16,8 @@ if [ ! -d "$BB_SHARE_DOCKER_DIR/$CACHE_NAME" ]; then
     echo "Saving $CACHE_NAME"
     mkdir -p $INSTALL_DIR
     cp -R $INSTALL_DIR $BB_SHARE_DOCKER_DIR/$CACHE_NAME
+    ls -al $INSTALL_DIR
+    ls -al $BB_SHARE_DOCKER_DIR/$CACHE_NAME
     echo "Done saving cache"
 else
     echo "$CACHE_NAME already exists. Skipping"
