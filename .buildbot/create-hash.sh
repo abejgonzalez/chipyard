@@ -5,7 +5,7 @@
 # turn echo on and error on earliest command
 set -ex
 
-# enter bhd repo
+# enter chipyard repo
 cd $HOME/build
 
 # get the version of riscv-tools from the git submodule hash

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# save the cached object
+# retrieve the cached object
 
 # prefix before the hash of the cached dir
 PREFIX=$1
@@ -18,10 +18,10 @@ echo "$(md5sum $HASH_FILE | awk '{print $1;}')"
 echo "$CACHE_NAME"
 
 if [ ! -d "$BB_SHARED_DOCKER_DIR/$CACHE_NAME" ]; then
-    echo "Saving $CACHE_NAME"
-    mkdir -p $INSTALL_DIR
-    cp -R $INSTALL_DIR $BB_SHARED_DOCKER_DIR/$CACHE_NAME
-    echo "Done saving cache"
+    echo "Failed to get $CACHE_NAME from the cache"
 else
-    echo "$CACHE_NAME already exists. Skipping"
+    echo "Getting cache and moving it to $INSTALL_DIR"
+    mkdir -p $INSTALL_DIR
+    cp -R $BB_SHARED_DOCKER_DIR/$CACHE_NAME $INSTALL_DIR
+    echo "Done moving cache"
 fi

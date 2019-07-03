@@ -7,7 +7,7 @@
 set -ex
 
 # init all submodules
-cd $HOME/project
+cd $HOME/build
 ./scripts/init-submodules-no-riscv-tools.sh
 
 # enter the verisim directory and build the specific config
