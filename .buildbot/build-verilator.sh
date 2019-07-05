@@ -6,7 +6,6 @@
 set -ex
 
 cd $HOME/build
-
 cd sims/verisim
 
 if [ ! -d "$HOME/build/sims/verisim/verilator" ]; then
